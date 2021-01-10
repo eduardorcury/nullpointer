@@ -1,0 +1,35 @@
+#exception {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #191414;
+    border-radius: 10px;
+    width: 400px;
+    height: 250px;
+}
+
+#exception .title {
+    justify-content: center;
+}
+
+#exception .title h1 {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+
+#exception .title hr {
+    border-top: 3px solid white;
+}
+
+#exception .description p {
+    font-size: 24px;
+    color: white;
+}
+
+#exception .solution a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: lighter;
+}
