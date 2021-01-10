@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "nullpointer"
+    }
+  },
+  "defaultProject": "nullpointer",
+  "cli": {
+    "analytics": "1d8e8852-b9a3-4673-aef9-b136cbc8e6f0"
+  }
 }
