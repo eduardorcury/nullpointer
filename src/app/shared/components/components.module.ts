@@ -5,7 +5,7 @@ import { ExceptionComponent } from './exception/exception.component';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [ExceptionComponent],
   imports: [
     CommonModule
   ],
