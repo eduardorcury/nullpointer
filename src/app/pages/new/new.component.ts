@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-new',
@@ -8,9 +8,16 @@ import { FormControl } from '@angular/forms';
 })
 export class NewComponent {
 
-  newExceptionControl = new FormControl('');
+  form = this.formBuilder.group({
+    title: ['', Validators.required, Validators.minLength(5)],
+    description: ['', Validators.required, Validators.minLength(5)],
+    solution: ['', Validators.required, Validators.minLength(5)]
+  });
 
-  constructor() { }
+  constructor(private formBuilder: FormBuilder) { }
 
+  onSubmit() {
+    console.log(this.form.value);
+  }
 
 }
