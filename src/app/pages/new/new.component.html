@@ -12,10 +12,11 @@
 
     <div class="field">
         <label>Solução</label>
-        <textarea formControlName="solution"></textarea>
+        <div class="text">
+            <textarea formControlName="solution"></textarea>
+            <div class="result" [innerHTML]="solutionHtml"></div>
+        </div>
     </div>
-
-    <span [innerHTML]="solutionHtml" ></span>
     
     <button class="submit" type="submit">Salvar</button>
 

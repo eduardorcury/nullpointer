@@ -24,7 +24,15 @@ export class NewComponent {
     this.markdown = require('markdown-it')({
       html: true,
       linkify: true,
-      typographer: true
+      typographer: true,
+      highlight: function (str, lang) {
+        if (lang && require('highlight.js').getLanguage(lang)) {
+          try {
+            return require('highlight.js').highlight(lang, str).value;
+          } catch (__) {}
+        }
+        return '';
+      }
     });
     this.onChanges();
 
