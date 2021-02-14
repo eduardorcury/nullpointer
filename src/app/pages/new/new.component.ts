@@ -35,7 +35,11 @@ export class NewComponent {
         }
         return '<pre class="hljs"><code>' + this.markdown.utils.escapeHtml(str) + '</code></pre>';;
       }
-    });
+    })
+      .use( require('markdown-it-emoji'), 
+            require('markdown-it-sup'), 
+            require('markdown-it-mark'));
+    
     this.onChanges();
 
   }
