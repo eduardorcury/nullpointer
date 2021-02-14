@@ -28,10 +28,12 @@ export class NewComponent {
       highlight: function (str, lang) {
         if (lang && require('highlight.js').getLanguage(lang)) {
           try {
-            return require('highlight.js').highlight(lang, str).value;
+            return  '<pre class="hljs"><code>' +
+                    require('highlight.js').highlight(lang, str, true).value +
+                    '</code></pre>';
           } catch (__) {}
         }
-        return '';
+        return '<pre class="hljs"><code>' + this.markdown.utils.escapeHtml(str) + '</code></pre>';;
       }
     });
     this.onChanges();
